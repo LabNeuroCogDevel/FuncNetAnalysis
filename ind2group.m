@@ -15,7 +15,6 @@ function [files,a,b,sortedb,y] = ind2group(n,w,path)
 % Last updated: 11/1/2013
 
 %Import individual subject files. 
-path = 'your path to individual subject files';
 files = dir(path);
     for i = 3:(n+2)(files),
         a{i-2} = dlmread([path '/' files(i).name,'\t',3,2]);
@@ -45,8 +44,8 @@ end
 % If you're not interested in using a sliding boxcar,
 % comment out what is below. 
 
-for r1=1:82
-    for r2=1:82
+for r1=1:n
+    for r2=1:n
         for i=0:(length(b)-w)
         y(r1,r2,i+1) = mean ( cellfun(@(x)(x(r1,r2)),b((i+1):(w+i)) ));
         end
