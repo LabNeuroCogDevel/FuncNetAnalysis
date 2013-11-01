@@ -18,9 +18,9 @@ function [Y,group_age,Master] = Func_Net_Calcs(n,g,y,age,w,por)
 	%	 6. por - vector contaning range of densities (ex: por = [.01:.01:.30];)
 	
 	% Output:
-		 1. Y - Unthresholded matrix with cleared diagonal
-		 2. group_age - average age for each boxcar group
-		 3. Master - Structure containing all network output for each thresholded network
+	%	 1. Y - Unthresholded matrix with cleared diagonal
+	%	 2. group_age - average age for each boxcar group
+	%	 3. Master - Structure containing all network output for each thresholded network
 %-------------------------------------------------------------------------------------------
 
 % ! Before using this function, you must call the folder containing it into Matlab
