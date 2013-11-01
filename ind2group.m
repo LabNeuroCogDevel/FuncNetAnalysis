@@ -1,4 +1,4 @@
-function [a,b,sortedb,y] = ind2group(n,w,)
+function [files,a,b,sortedb,y] = ind2group(n,w,path) 
 % Script's functions include:
 %   1. Importing individual timeseries of each region
 %      into Matlab. Should be in the format of 
@@ -12,19 +12,13 @@ function [a,b,sortedb,y] = ind2group(n,w,)
 %              and g = # of groups. 
 
 % Written by: Scott Marek
-% Last updated: 8/22/2013
-
-% Input the number of individual subject files you have
-n = 78;
-
-% Input your desired group size.
-w = 20;
+% Last updated: 11/1/2013
 
 %Import individual subject files. 
 path = 'your path to individual subject files';
-files = (path);
+files = dir(path);
     for i = 3:(n+2)(files),
-        a{i-2} = dlmread([path/files(i).name,'\t',3,2]);
+        a{i-2} = dlmread([path '/' files(i).name,'\t',3,2]);
     end
     
     
@@ -41,7 +35,8 @@ end
 % correlated, you need to sort them.
 % If sorting ascendingly by age, use Matlab function
 % sortcell. 
-% Ex:
+% If you don't have sortcell this will error out, so get it! 
+% Ex call:
 % var = sortcell(b,[2]); 2 refers to column of the variable.
 
 
