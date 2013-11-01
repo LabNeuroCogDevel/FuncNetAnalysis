@@ -1,12 +1,27 @@
-function [group_age,Master] = Func_Net_Calcs(n,g,y,age,w)
+function [Y,group_age,Master] = Func_Net_Calcs(n,g,y,age,w,por)
 
 % Written by: Scott Marek
-% Last Modified: 10/31/2013
-% Call: [group_age,Master] = Func_Net_Calcs(n,g,w);
+% Last Modified: 11/1/2013
+% Call: [Y,group_age,Master] = Func_Net_Calcs(n,g,w);
 % Read everything before using.
 % Meant to ONLY be used for BINARY, UNDIRECTED graphs!!!
 % Functions imported from Brain Connectivity Toolbox 
 % (Rubinov & Sporns, 2010,NeuroImage)
+
+%-------------------------------------------------------------------------------------------
+	% Input:
+	%	 1. n - number of nodes
+	%	 2. g - number of groups
+	%	 3. y - Untresholded matrix with non-cleared diagonal
+	%	 4. age - vector containing ages of participants in ASCENDING order
+	%	 5. w - size of sliding boxcar (# of subjects in each group)
+	%	 6. por - vector contaning range of densities (ex: por = [.01:.01:.30];)
+	
+	% Output:
+		 1. Y - Unthresholded matrix with cleared diagonal
+		 2. group_age - average age for each boxcar group
+		 3. Master - Structure containing all network output for each thresholded network
+%-------------------------------------------------------------------------------------------
 
 % ! Before using this function, you must call the folder containing it into Matlab
 % In Matlab window: addpath('xxxxxxxx')
@@ -14,21 +29,19 @@ function [group_age,Master] = Func_Net_Calcs(n,g,y,age,w)
 
 %-------------------------------------------------------------------------------------------
 
-% STEP 1: MAKE SURE YOU CLEAR THE DIAGONAL FOR ALL MATRICES!
-%	1. Create a square matrix of ones with a diagonal of zero.
+% STEP 1: CLEAR THE DIAGONAL FOR ALL MATRICES
 
-ones_zeros = ~eye(n); % Creates an n x n  matrix of ones with zero across the diagonal.
+	% 1. Create a square matrix of ones with a diagonal of zero.
 
-%	2. Multiple this matrix by your 3D adjacency matrix.
+	ones_zeros = ~eye(n); % Creates an n x n  matrix of ones with zero across the diagonal.
+
+	% 2. Multiple this matrix by the 3D adjacency matrix.
 
 		for k = 1:g,
 			Y(:,:,k) = y(:,:,k).*(ones_zeros);
 		end
 %-------------------------------------------------------------------------------------------
 
-% BE SURE n, g, and Ci0 (See step 6 [Modularity]) ARE PROPERLY DEFINED, OR THIS WILL ERROR OUT!!
-
-%-------------------------------------------------------------------------------------------
 
 % Step 2: Create a vector containing the mean age for each group of your sliding boxcar. 
 
@@ -39,14 +52,11 @@ ones_zeros = ~eye(n); % Creates an n x n  matrix of ones with zero across the di
 %-------------------------------------------------------------------------------------------
 
 
-%Step 3: Threshold your matrices (Should use a range of threshold values)
-
-%Need to define a range of thresholds; can go higher if you please. 
-
-por = [.01:.01:.30];
+%Step 3: Threshold your matrices (Vector should contain a range of threshold values)
 
 
-for p = 1:length(por); %This number is your threshold. Change accordingly. 
+for p = 1:length(por); 
+% Beginning of for loop. Calculating each network metric for each threshold. 
 
 %-------------------------------------------------------------------------------------------
 
@@ -55,13 +65,12 @@ for p = 1:length(por); %This number is your threshold. Change accordingly.
 % Script modified from threshold_proportional.m
 
 %   This function thresholds the connectivity matrix by network density.
-%   All weights below the given threshold, and all weights
-%   on the main diagonal (self-self connections) are set to 0.
+%   All weights below the given threshold are set to 0.
 %
 %   Inputs: W           weighted or binary connectivity matrix
 %           thr         weight treshold
 %
-%   Output: W      thresholded connectivity matrix
+%   Output: W           thresholded connectivity matrix
 
 W=Y;
 for k = 1:g,
@@ -80,7 +89,6 @@ W = double(W~=0);
 
 % All scripts I am using are from the Brain Connectivity Toolbox:
 % Available for free at: https://sites.google.com/site/bctnet/
-
 
 
 % MEAURES OF FUNCTIONAL SEGREGATION
@@ -104,8 +112,9 @@ W = double(W~=0);
         end
 
 
-	% 4.Clustering coefficient
-		% The clustering coefficient is the fraction of triangles around a node.
+    % 4.Clustering coefficient
+		% The clustering coefficient is the fraction of neighbors of a node that are also
+		% neighbors of each other.
 
 		for k = 1:g,
 			C(:,k) = clustering_coef_bu(W(:,:,k));
@@ -125,30 +134,30 @@ W = double(W~=0);
         %   shortest path from node u to node v. The average shortest path 
         %   length is the characteristic path length of the network.
         
-        for k = 1:g,
-			D(:,:,k)=distance_bin(W(:,:,k));
+		for k = 1:g,
+		     D(:,:,k)=distance_bin(W(:,:,k));
 		end
         
     % 2.Script for:
             %   Characteristic Path Length 
             %   Global Efficiency
-            %   Eccentricity
-            %   Radius of graph
-            %   Diameter of graph
+
 	for k = 1:g,
- lambda(:,k) = charpath(D(:,:,k));
-    end
+ 	    lambda(:,k) = charpath(D(:,:,k));
+	end
 
     
-     for k =1:g,
-		[Ci(:,k) Q(k)] = modularity_und(W(:,:,k));
-        end
+	 for k =1:g,
+	     [Ci(:,k) Q(k)] = modularity_und(W(:,:,k));
+         end
         
 
 	
  % MEASURES OF BRAIN ECONOMY
 
 	% 1. Edges and Edge Density (Measures of cost)
+	   
+	   % These will obviously be equal across groups. If they are not, something's wrong. 
 
 		for k = 1:g,
 			K(:,k) = nnz(triu(W(:,:,k)));
@@ -182,8 +191,8 @@ W = double(W~=0);
         % betweenness centrality participate in a large number of shortest paths.
         
 		for k = 1:g,
-			BC = betweenness_bin(W(:,:,k));
-        end
+		    BC = betweenness_bin(W(:,:,k));
+        	end
         
 
   
@@ -196,18 +205,16 @@ W = double(W~=0);
         % A positive assortativity coefficient indicates that nodes tend to 
         % link to other nodes with the same or similar degree.
     
-		for k = 1:g,
+    	flag = 1;
+	for k = 1:g,
             r(k) = assortativity_bin(W(:,:,k),flag);
         end 
-
-
-%---------------------------------------------------------------------------------------------
 
 
 %---------------------------------------------------------------------------------------------	
 
 % Step 7: Make a structure called Master that will contain network measures for 
-% each threshold. Master structure contains the following. 
+% each network across densities. Master structure contains the following. 
 
 Master(p).por = por(p);
 Master(p).BC = BC;
