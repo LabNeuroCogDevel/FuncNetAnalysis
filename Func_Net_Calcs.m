@@ -17,7 +17,7 @@ function [group_age,Master] = Func_Net_Calcs(n,g,y,age,w)
 % STEP 1: MAKE SURE YOU CLEAR THE DIAGONAL FOR ALL MATRICES!
 %	1. Create a square matrix of ones with a diagonal of zero.
 
-ones_zeros = ~eye(n); % Creates an 82x82 matrix of ones with zero across the diagonal.
+ones_zeros = ~eye(n); % Creates an n x n  matrix of ones with zero across the diagonal.
 
 %	2. Multiple this matrix by your 3D adjacency matrix.
 
