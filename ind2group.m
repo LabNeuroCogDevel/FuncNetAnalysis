@@ -1,4 +1,4 @@
-function [files,a,b,sortedb,y] = ind2group(n,w,path) 
+function [files,a,b,c,d,y] = ind2group(n,w,path,age) 
 % Script's functions include:
 %   1. Importing individual timeseries of each region
 %      into Matlab. Should be in the format of 
@@ -29,6 +29,7 @@ for i = 1:n,
     b{i} = corrcoef(a{i});
 end
 
+c = horzcat(b,age);
 
 % Now that all your matrices are imported and have been
 % correlated, you need to sort them.
@@ -38,7 +39,8 @@ end
 % Ex call:
 % var = sortcell(b,[2]); 2 refers to column of the variable.
 
-
+c = sortcell(b,[2]);
+d = cell2mat(c,1);
 
 % Average group correlation matrices using a sliding boxcar.
 % If you're not interested in using a sliding boxcar,
@@ -46,8 +48,8 @@ end
 
 for r1=1:n
     for r2=1:n
-        for i=0:(length(b)-w)
-        y(r1,r2,i+1) = mean ( cellfun(@(x)(x(r1,r2)),b((i+1):(w+i)) ));
+        for i=0:(length(d)-w)
+        y(r1,r2,i+1) = mean ( cellfun(@(x)(x(r1,r2)),d((i+1):(w+i)) ));
         end
     end
 end
