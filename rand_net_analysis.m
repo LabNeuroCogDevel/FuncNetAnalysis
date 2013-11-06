@@ -1,8 +1,8 @@
-function [ Master_rand ] = rand_net_analysis(n,g,por,R)
+function [ Master_rand ] = rand_net_analysis(g,R)
 
 % Written by: Scott Marek
 % Last Modified: 11/6/2013
-% Call: [Y,group_age,Master] = Func_Net_Calcs(n,g,y,age,w,por);
+% Call: [ Master_rand ] = rand_net_analysis(g,R);
 % Read everything before using
 % Meant to ONLY be used for BINARY, UNDIRECTED random graphs!!!
 % Functions imported from Brain Connectivity Toolbox 
@@ -11,13 +11,11 @@ function [ Master_rand ] = rand_net_analysis(n,g,por,R)
 %-------------------------------------------------------------------------------------------
 
 % 	Input:
-%		 1. n = number of nodes
-%		 2. g = number of groups
-%		 3. R = Untresholded random matrix 		 
-%		 4. por = vector contaning range of densities (ex: por = [.01:.01:.30];)
-	
+%		 1. g = number of groups
+%		 2. R = Untresholded random matrix 		 
+
 %	Output:
-%	 	 3. Master_rand = Structure containing all network output for each thresholded network
+%	 	 1. Master_rand = Structure containing all network output for each thresholded network
 
 %-------------------------------------------------------------------------------------------
 
@@ -27,54 +25,7 @@ function [ Master_rand ] = rand_net_analysis(n,g,por,R)
 
 %-------------------------------------------------------------------------------------------
 
-% STEP 1: CLEAR THE DIAGONAL FOR ALL MATRICES
-
-	% 1. Create a square matrix of ones with a diagonal of zero.
-
-	ones_zeros = ~eye(n); % Creates an n x n  matrix of ones with zero across the diagonal.
-
-	% 2. Multiple this matrix by the 3D adjacency matrix.
-
-		for k = 1:g,
-			Rand(:,:,k) = R(:,:,k).*(ones_zeros);
-		end
-
-%-------------------------------------------------------------------------------------------
-
-
-% Step 2: Threshold your matrices (Vector should contain a range of threshold values)
-
-
-for p = 1:length(por); 
-% Beginning of for loop. Calculating each network metric for each threshold. 
-
-%-------------------------------------------------------------------------------------------
-
-% Step 3: Threhsold the matrices by network density
-
-% Script modified from threshold_proportional.m
-
-%   This function thresholds the connectivity matrix by network density.
-%   All weights below the given threshold are set to 0.
-%
-%   Inputs: Rand           weighted or binary random connectivity matrix
-%           por            edge density
-%
-%   Output: W              thresholded connectivity matrix
-
-W=Rand;
-for k = 1:g,
-W(:,:,k) = threshold_proportional(W(:,:,k),por(p));
-end
-
-
-%Step 4: Binarize matrices
-
-
-W = double(W~=0);
-
-
-%Step 5: Calculate clustering coefficient and path length 
+% Step 1: Calculate clustering coefficient and path length 
 
 %	1. Clustering coefficient
 %	   The clustering coefficient is the fraction of neighbors of a node that are also
@@ -107,7 +58,7 @@ W = double(W~=0);
        
 %-------------------------------------------------------------------------------------------
 
-% Step 6: Make a Master_rand structure 
+% Step 2: Make a Master_rand structure 
 
 Master_rand(p).meanC = meanC;
 Master_rand(p).D = D;
