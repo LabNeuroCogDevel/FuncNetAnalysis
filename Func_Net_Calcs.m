@@ -242,10 +242,25 @@ W = double(W~=0);
            r(k) = assortativity_bin(W(:,:,k),flag);
            end 
 
+%---------------------------------------------------------------------------------------------
+
+% Step 7: Generate random and lattice networks for comparison
+
+% Random Network
+for k = 1:g,
+ITER=2;
+[R(:,:,k) eff(k)] = randmio_und_connected(W(:,:,k),ITER);
+end
+
+% Lattice Network 
+for k = 1:g,
+[Rlatt(:,:,k),Rrp(:,:,k),ind_rp,eff(k)] = latmio_und_connected(W(:,:,k),ITER,D(:,:,k));
+end
+
 
 %---------------------------------------------------------------------------------------------	
 
-% Step 7: Make a structure called Master that will contain network measures for 
+% Step 8: Make a structure called Master that will contain network measures for 
 % each network across densities. Master structure contains the following. 
 
 Master(p).por = por(p);
@@ -266,6 +281,7 @@ Master(p).P = P;
 Master(p).Z = Z;
 Master(p).r = r;
 end
+
 
 % Output of importance will be in your Master structure. 
 
