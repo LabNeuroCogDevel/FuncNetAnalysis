@@ -14,7 +14,7 @@ function [files,a,b,c,d,y] = ind2group(n,w,path,age,nodes)
 %   4. Generate average group correlation matrices
 %      using a sliding boxcar of n subjects. 
 
-%-----------------------------------------------------------------------------------------
+%------------------------------------------------------------------------------------------
   
 %   Output:	files = individual subject files 
 %			a = 1xn cell containing individual timeseries x ROI for each subject
