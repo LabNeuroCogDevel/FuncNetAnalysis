@@ -1,7 +1,7 @@
 function [Y,group_age,Master] = Func_Net_Calcs(n,g,y,age,w,por)
 
 % Written by: Scott Marek
-% Last Modified: 11/1/2013
+% Last Modified: 11/6/2013
 % Call: [Y,group_age,Master] = Func_Net_Calcs(n,g,y,age,w,por);
 % Read everything before using.
 % Meant to ONLY be used for BINARY, UNDIRECTED graphs!!!
