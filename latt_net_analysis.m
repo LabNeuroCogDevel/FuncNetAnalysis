@@ -2,7 +2,7 @@ function [ Master_latt ] = latt_net_analysis(g,Rlatt)
 
 % Written by: Scott Marek
 % Last Modified: 11/6/2013
-% Call: [Y,group_age,Master] = Func_Net_Calcs(n,g,y,age,w,por);
+% Call: [ Master_latt ] = latt_net_analysis(g,Rlatt);
 % Read everything before using
 % Meant to ONLY be used for BINARY, UNDIRECTED random graphs!!!
 % Functions imported from Brain Connectivity Toolbox 
@@ -59,7 +59,7 @@ function [ Master_latt ] = latt_net_analysis(g,Rlatt)
        
 %-------------------------------------------------------------------------------------------
 
-% Step 2: Make a Master_rand structure 
+% Step 2: Make a Master_latt structure 
 
 Master_latt(p).meanC = meanC;
 Master_latt(p).D = D;
