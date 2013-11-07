@@ -32,7 +32,7 @@ function [ Master_rand ] = rand_net_analysis(g,R)
 %	   neighbors of each other.
 
 	   for k = 1:g,
-	   C(:,k) = clustering_coef_bu(W(:,:,k));
+	   C(:,k) = clustering_coef_bu(R(:,:,k));
 	   end
 		
 %	   Then take the mean of each group...
@@ -47,7 +47,7 @@ function [ Master_rand ] = rand_net_analysis(g,R)
 %	   length is the characteristic path length of the network.
         
 	   for k = 1:g,
-	   D(:,:,k)=distance_bin(W(:,:,k));
+	   D(:,:,k)=distance_bin(R(:,:,k));
 	   end
         
 % 	3. Path Length:
