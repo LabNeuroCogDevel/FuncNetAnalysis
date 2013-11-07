@@ -88,7 +88,7 @@ W = double(W~=0);
 %--------------------------------------------------------------------------
 
 % Step 8: Make a structure called Master_thr that will contain network measures for 
-% each network across densities. Master_thr structure contains the following. 
+% each network across densities. Master_thr structure contains the following: 
 
 Master(t).K = K;
 Master(t).kden = kden;
