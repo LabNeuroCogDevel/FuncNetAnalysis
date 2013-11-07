@@ -33,7 +33,7 @@ function [ Master_latt ] = latt_net_analysis(g,Rlatt)
 %	   neighbors of each other.
 
 	   for k = 1:g,
-	   C(:,k) = clustering_coef_bu(W(:,:,k));
+	   C(:,k) = clustering_coef_bu(Rlatt(:,:,k));
 	   end
 		
 %	   Then take the mean of each group...
@@ -48,7 +48,7 @@ function [ Master_latt ] = latt_net_analysis(g,Rlatt)
 %	   length is the characteristic path length of the network.
         
 	   for k = 1:g,
-	   D(:,:,k)=distance_bin(W(:,:,k));
+	   D(:,:,k)=distance_bin(Rlatt(:,:,k));
 	   end
         
 % 	3. Path Length:
