@@ -1,0 +1,264 @@
+1	-25	-98	-12	TT_Daemon      	0.0	Left  Lingual Gyrus             	 MPM	232
+2	27	-97	-13	TT_Daemon      	0.0	Right Lingual Gyrus             	 MPM	32 
+3	24	32	-18	TT_Daemon      	0.0	Right Middle Frontal Gyrus      	 MPM	47 
+4	-56	-45	-24	TT_Daemon      	0.0	Left  Inferior Temporal Gyrus   	 MPM	229
+5	8	41	-24	TT_Daemon      	0.0	Right Orbital Gyrus             	 MPM	34 
+6	-21	-22	-20	TT_Daemon      	0.0	Left  Parahippocampal Gyrus     	 MPM	231
+7	17	-28	-17	TT_Daemon      	0.0	Right Culmen                    	 MPM	66 
+8	-37	-29	-26	TT_Daemon      	0.0	Left  Parahippocampal Gyrus     	 MPM	231
+9	65	-24	-19	TT_Daemon      	0.0	Right Inferior Temporal Gyrus   	 MPM	29 
+10	52	-34	-27	TT_Daemon      	0.0	Right Fusiform Gyrus            	 MPM	27 
+11	55	-31	-17	TT_Daemon      	0.0	Right Middle Temporal Gyrus     	 MPM	35 
+12	34	38	-12	TT_Daemon      	0.0	Right Middle Frontal Gyrus      	 MPM	47 
+13	-7	-52	61	TT_Daemon      	0.0	Left  Precuneus                 	 MPM	245
+14	-14	-18	40	TT_Daemon      	0.0	Left  Cingulate Gyrus           	 MPM	243
+15	0	-15	47	TT_Daemon      	0.0	Left  Paracentral Lobule        	 MPM	248
+16	10	-2	45	TT_Daemon      	0.0	Right Cingulate Gyrus           	 MPM	43 
+17	-7	-21	65	TT_Daemon      	0.0	Left  Medial Frontal Gyrus      	 MPM	252
+18	-7	-33	72	TT_Daemon      	0.0	Left  Paracentral Lobule        	 MPM	248
+19	13	-33	75	TT_Daemon	-1	unknown13_-33_75	0	0
+20	-54	-23	43	TT_Daemon      	0.0	Left  Postcentral Gyrus         	 MPM	249
+21	29	-17	71	TT_Daemon      	0.0	Right Precentral Gyrus          	 MPM	50 
+22	10	-46	73	TT_Daemon      	0.0	Right Postcentral Gyrus         	 MPM	49 
+23	-23	-30	72	TT_Daemon      	0.0	Left  Precentral Gyrus          	 MPM	250
+24	-40	-19	54	TT_Daemon      	0.0	Left  Precentral Gyrus          	 MPM	250
+25	29	-39	59	TT_Daemon      	0.0	Right Postcentral Gyrus         	 MPM	49 
+26	50	-20	42	TT_Daemon      	0.0	Right Postcentral Gyrus         	 MPM	49 
+27	-38	-27	69	TT_Daemon      	0.0	Left  Precentral Gyrus          	 MPM	250
+28	20	-29	60	TT_Daemon      	0.0	Right Precentral Gyrus          	 MPM	50 
+29	44	-8	57	TT_Daemon      	0.0	Right Precentral Gyrus          	 MPM	50 
+30	-29	-43	61	TT_Daemon      	0.0	Left  Postcentral Gyrus         	 MPM	249
+31	10	-17	74	TT_Daemon      	0.0	Right Superior Frontal Gyrus    	 MPM	51 
+32	22	-42	69	TT_Daemon      	0.0	Right Postcentral Gyrus         	 MPM	49 
+33	-45	-32	47	TT_Daemon      	0.0	Left  Postcentral Gyrus         	 MPM	249
+34	-21	-31	61	TT_Daemon      	0.0	Left  Postcentral Gyrus         	 MPM	249
+35	-13	-17	75	TT_Daemon	-1	unknown-13_-17_75	0	0
+36	42	-20	55	TT_Daemon      	0.0	Right Postcentral Gyrus         	 MPM	49 
+37	-38	-15	69	TT_Daemon      	0.0	Left  Precentral Gyrus          	 MPM	250
+38	-16	-46	73	TT_Daemon      	0.0	Left  Postcentral Gyrus         	 MPM	249
+39	2	-28	60	TT_Daemon      	0.0	Right Medial Frontal Gyrus      	 MPM	52 
+40	3	-17	58	TT_Daemon      	0.0	Right Medial Frontal Gyrus      	 MPM	52 
+41	38	-17	45	TT_Daemon      	0.0	Right Precentral Gyrus          	 MPM	50 
+42	-49	-11	35	TT_Daemon      	0.0	Left  Precentral Gyrus          	 MPM	250
+43	36	-9	14	TT_Daemon      	0.0	Right Insula                    	 MPM	30 
+44	51	-6	32	TT_Daemon      	0.0	Right Precentral Gyrus          	 MPM	50 
+45	-53	-10	24	TT_Daemon      	0.0	Left  Precentral Gyrus          	 MPM	250
+46	66	-8	25	TT_Daemon      	0.0	Right Precentral Gyrus          	 MPM	50 
+47	-3	2	53	TT_Daemon      	0.0	Left  Medial Frontal Gyrus      	 MPM	252
+48	54	-28	34	TT_Daemon      	0.0	Right Inferior Parietal Lobule  	 MPM	44 
+49	19	-8	64	TT_Daemon      	0.0	Right Middle Frontal Gyrus      	 MPM	47 
+50	-16	-5	71	TT_Daemon      	0.0	Left  Superior Frontal Gyrus    	 MPM	251
+51	-10	-2	42	TT_Daemon      	0.0	Left  Cingulate Gyrus           	 MPM	243
+52	37	1	-4	TT_Daemon      	0.0	Right Insula                    	 MPM	30 
+53	13	-1	70	TT_Daemon      	0.0	Right Superior Frontal Gyrus    	 MPM	51 
+54	7	8	51	TT_Daemon      	0.0	Right Medial Frontal Gyrus      	 MPM	52 
+55	-45	0	9	TT_Daemon      	0.0	Left  Precentral Gyrus          	 MPM	250
+56	49	8	-1	TT_Daemon      	0.0	Right Superior Temporal Gyrus   	 MPM	36 
+57	-34	3	4	TT_Daemon      	0.0	Left  Claustrum                 	 MPM	275
+58	-51	8	-2	TT_Daemon      	0.0	Left  Superior Temporal Gyrus   	 MPM	236
+59	-5	18	34	TT_Daemon      	0.0	Left  Cingulate Gyrus           	 MPM	243
+60	36	10	1	TT_Daemon      	0.0	Right Insula                    	 MPM	30 
+61	32	-26	13	TT_Daemon      	0.0	Right Insula                    	 MPM	30 
+62	65	-33	20	TT_Daemon      	0.0	Right Superior Temporal Gyrus   	 MPM	36 
+63	58	-16	7	TT_Daemon      	0.0	Right Superior Temporal Gyrus   	 MPM	36 
+64	-38	-33	17	TT_Daemon      	0.0	Left  Superior Temporal Gyrus   	 MPM	236
+65	-60	-25	14	TT_Daemon      	0.0	Left  Postcentral Gyrus         	 MPM	249
+66	-49	-26	5	TT_Daemon      	0.0	Left  Superior Temporal Gyrus   	 MPM	236
+67	43	-23	20	TT_Daemon      	0.0	Right Insula                    	 MPM	30 
+68	-50	-34	26	TT_Daemon      	0.0	Left  Inferior Parietal Lobule  	 MPM	244
+69	-53	-22	23	TT_Daemon      	0.0	Left  Postcentral Gyrus         	 MPM	249
+70	-55	-9	12	TT_Daemon      	0.0	Left  Precentral Gyrus          	 MPM	250
+71	56	-5	13	TT_Daemon      	0.0	Right Precentral Gyrus          	 MPM	50 
+72	59	-17	29	TT_Daemon      	0.0	Right Postcentral Gyrus         	 MPM	49 
+73	-30	-27	12	TT_Daemon      	0.0	Left  Insula                    	 MPM	230
+74	-41	-75	26	TT_Daemon      	0.0	Left  Middle Temporal Gyrus     	 MPM	235
+75	6	67	-4	TT_Daemon      	0.0	Right Superior Frontal Gyrus    	 MPM	51 
+76	8	48	-15	TT_Daemon      	0.0	Right Medial Frontal Gyrus      	 MPM	52 
+77	-13	-40	1	TT_Daemon      	0.0	Left  Parahippocampal Gyrus     	 MPM	231
+78	-18	63	-9	TT_Daemon      	0.0	Left  Superior Frontal Gyrus    	 MPM	251
+79	-46	-61	21	TT_Daemon      	0.0	Left  Middle Temporal Gyrus     	 MPM	235
+80	43	-72	28	TT_Daemon      	0.0	Right Middle Temporal Gyrus     	 MPM	35 
+81	-44	12	-34	TT_Daemon      	0.0	Left  Superior Temporal Gyrus   	 MPM	236
+82	46	16	-30	TT_Daemon      	0.0	Right Superior Temporal Gyrus   	 MPM	36 
+83	-68	-23	-16	TT_Daemon      	0.0	Left  Middle Temporal Gyrus     	 MPM	235
+84	-58	-26	-15	TT_Daemon      	0.0	Left  Middle Temporal Gyrus     	 MPM	235
+85	27	16	-17	TT_Daemon      	0.0	Right Inferior Frontal Gyrus    	 MPM	39 
+86	-44	-65	35	TT_Daemon      	0.0	Left  Angular Gyrus             	 MPM	241
+87	-39	-75	44	TT_Daemon      	0.0	Left  Precuneus                 	 MPM	245
+88	-7	-55	27	TT_Daemon      	0.0	Left  Cingulate Gyrus           	 MPM	243
+89	6	-59	35	TT_Daemon      	0.0	Right Precuneus                 	 MPM	45 
+90	-11	-56	16	TT_Daemon      	0.0	Left  Posterior Cingulate       	 MPM	220
+91	-3	-49	13	TT_Daemon      	0.0	Left  Posterior Cingulate       	 MPM	220
+92	8	-48	31	TT_Daemon      	0.0	Right Cingulate Gyrus           	 MPM	43 
+93	15	-63	26	TT_Daemon      	0.0	Right Precuneus                 	 MPM	45 
+94	-2	-37	44	TT_Daemon      	0.0	Left  Cingulate Gyrus           	 MPM	243
+95	11	-54	17	TT_Daemon      	0.0	Right Posterior Cingulate       	 MPM	20 
+96	52	-59	36	TT_Daemon      	0.0	Right Angular Gyrus             	 MPM	41 
+97	23	33	48	TT_Daemon      	0.0	Right Superior Frontal Gyrus    	 MPM	51 
+98	-10	39	52	TT_Daemon      	0.0	Left  Superior Frontal Gyrus    	 MPM	251
+99	-16	29	53	TT_Daemon      	0.0	Left  Superior Frontal Gyrus    	 MPM	251
+100	-35	20	51	TT_Daemon      	0.0	Left  Middle Frontal Gyrus      	 MPM	247
+101	22	39	39	TT_Daemon      	0.0	Right Superior Frontal Gyrus    	 MPM	51 
+102	13	55	38	TT_Daemon      	0.0	Right Superior Frontal Gyrus    	 MPM	51 
+103	-10	55	39	TT_Daemon      	0.0	Left  Superior Frontal Gyrus    	 MPM	251
+104	-20	45	39	TT_Daemon      	0.0	Left  Superior Frontal Gyrus    	 MPM	251
+105	6	54	16	TT_Daemon      	0.0	Right Medial Frontal Gyrus      	 MPM	52 
+106	6	64	22	TT_Daemon      	0.0	Right Medial Frontal Gyrus      	 MPM	52 
+107	-7	51	-1	TT_Daemon      	0.0	Left  Medial Frontal Gyrus      	 MPM	252
+108	9	54	3	TT_Daemon      	0.0	Right Medial Frontal Gyrus      	 MPM	52 
+109	-3	44	-9	TT_Daemon      	0.0	Left  Medial Frontal Gyrus      	 MPM	252
+110	8	42	-5	TT_Daemon      	0.0	Right Anterior Cingulate        	 MPM	21 
+111	-11	45	8	TT_Daemon      	0.0	Left  Anterior Cingulate        	 MPM	221
+112	-2	38	36	TT_Daemon      	0.0	Left  Medial Frontal Gyrus      	 MPM	252
+113	-3	42	16	TT_Daemon      	0.0	Left  Anterior Cingulate        	 MPM	221
+114	-20	64	19	TT_Daemon      	0.0	Left  Superior Frontal Gyrus    	 MPM	251
+115	-8	48	23	TT_Daemon      	0.0	Left  Medial Frontal Gyrus      	 MPM	252
+116	65	-12	-19	TT_Daemon      	0.0	Right Inferior Temporal Gyrus   	 MPM	29 
+117	-56	-13	-10	TT_Daemon      	0.0	Left  Middle Temporal Gyrus     	 MPM	235
+118	-58	-30	-4	TT_Daemon      	0.0	Left  Middle Temporal Gyrus     	 MPM	235
+119	65	-31	-9	TT_Daemon      	0.0	Right Middle Temporal Gyrus     	 MPM	35 
+120	-68	-41	-5	TT_Daemon      	0.0	Left  Middle Temporal Gyrus     	 MPM	235
+121	13	30	59	TT_Daemon      	0.0	Right Superior Frontal Gyrus    	 MPM	51 
+122	12	36	20	TT_Daemon      	0.0	Right Anterior Cingulate        	 MPM	21 
+123	52	-2	-16	TT_Daemon      	0.0	Right Middle Temporal Gyrus     	 MPM	35 
+124	-26	-40	-8	TT_Daemon      	0.0	Left  Parahippocampal Gyrus     	 MPM	231
+125	27	-37	-13	TT_Daemon      	0.0	Right Parahippocampal Gyrus     	 MPM	31 
+126	-34	-38	-16	TT_Daemon      	0.0	Left  Fusiform Gyrus            	 MPM	227
+127	28	-77	-32	TT_Daemon      	0.0	Right Uvula                     	 MPM	62 
+128	52	7	-30	TT_Daemon      	0.0	Right Middle Temporal Gyrus     	 MPM	35 
+129	-53	3	-27	TT_Daemon      	0.0	Left  Middle Temporal Gyrus     	 MPM	235
+130	47	-50	29	TT_Daemon      	0.0	Right Supramarginal Gyrus       	 MPM	42 
+131	-49	-42	1	TT_Daemon      	0.0	Left  Middle Temporal Gyrus     	 MPM	235
+132	-31	19	-19	TT_Daemon      	0.0	Left  Inferior Frontal Gyrus    	 MPM	239
+133	-2	-35	31	TT_Daemon      	0.0	Left  Cingulate Gyrus           	 MPM	243
+134	-7	-71	42	TT_Daemon      	0.0	Left  Precuneus                 	 MPM	245
+135	11	-66	42	TT_Daemon      	0.0	Right Precuneus                 	 MPM	45 
+136	4	-48	51	TT_Daemon      	0.0	Right Precuneus                 	 MPM	45 
+137	-46	31	-13	TT_Daemon      	0.0	Left  Inferior Frontal Gyrus    	 MPM	239
+138	-10	11	67	TT_Daemon      	0.0	Left  Superior Frontal Gyrus    	 MPM	251
+139	49	35	-12	TT_Daemon      	0.0	Right Inferior Frontal Gyrus    	 MPM	39 
+140	8	-91	-7	TT_Daemon      	0.0	Right Lingual Gyrus             	 MPM	32 
+141	17	-91	-14	TT_Daemon      	0.0	Right Inferior Occipital Gyrus  	 MPM	28 
+142	-12	-95	-13	TT_Daemon      	0.0	Left  Lingual Gyrus             	 MPM	232
+143	18	-47	-10	TT_Daemon      	0.0	Right Parahippocampal Gyrus     	 MPM	31 
+144	40	-72	14	TT_Daemon      	0.0	Right Middle Temporal Gyrus     	 MPM	35 
+145	8	-72	11	TT_Daemon      	0.0	Right Cuneus                    	 MPM	40 
+146	-8	-81	7	TT_Daemon      	0.0	Left  Cuneus                    	 MPM	240
+147	-28	-79	19	TT_Daemon      	0.0	Left  Middle Occipital Gyrus    	 MPM	233
+148	20	-66	2	TT_Daemon      	0.0	Right Lingual Gyrus             	 MPM	32 
+149	-24	-91	19	TT_Daemon      	0.0	Left  Cuneus                    	 MPM	240
+150	27	-59	-9	TT_Daemon      	0.0	Right Parahippocampal Gyrus     	 MPM	31 
+151	-15	-72	-8	TT_Daemon      	0.0	Left  Lingual Gyrus             	 MPM	232
+152	-18	-68	5	TT_Daemon      	0.0	Left  Cuneus                    	 MPM	240
+153	43	-78	-12	TT_Daemon      	0.0	Right Inferior Occipital Gyrus  	 MPM	28 
+154	-47	-76	-10	TT_Daemon      	0.0	Left  Middle Occipital Gyrus    	 MPM	233
+155	-14	-91	31	TT_Daemon      	0.0	Left  Cuneus                    	 MPM	240
+156	15	-87	37	TT_Daemon      	0.0	Right Precuneus                 	 MPM	45 
+157	29	-77	25	TT_Daemon	-1	unknown29_-77_25	0	0
+158	20	-86	-2	TT_Daemon      	0.0	Right Lingual Gyrus             	 MPM	32 
+159	15	-77	31	TT_Daemon      	0.0	Right Cuneus                    	 MPM	40 
+160	-16	-52	-1	TT_Daemon      	0.0	Left  Lingual Gyrus             	 MPM	232
+161	42	-66	-8	TT_Daemon      	0.0	Right Middle Occipital Gyrus    	 MPM	33 
+162	24	-87	24	TT_Daemon      	0.0	Right Cuneus                    	 MPM	40 
+163	6	-72	24	TT_Daemon      	0.0	Right Precuneus                 	 MPM	45 
+164	-42	-74	0	TT_Daemon      	0.0	Left  Middle Occipital Gyrus    	 MPM	233
+165	26	-79	-16	TT_Daemon      	0.0	Right Lingual Gyrus             	 MPM	32 
+166	-16	-77	34	TT_Daemon      	0.0	Left  Precuneus                 	 MPM	245
+167	-3	-81	21	TT_Daemon      	0.0	Left  Cuneus                    	 MPM	240
+168	-40	-88	-6	TT_Daemon      	0.0	Left  Inferior Occipital Gyrus  	 MPM	228
+169	37	-84	13	TT_Daemon      	0.0	Right Middle Occipital Gyrus    	 MPM	33 
+170	6	-81	6	TT_Daemon      	0.0	Right Cuneus                    	 MPM	40 
+171	-26	-90	3	TT_Daemon      	0.0	Left  Middle Occipital Gyrus    	 MPM	233
+172	-33	-79	-13	TT_Daemon      	0.0	Left  Middle Occipital Gyrus    	 MPM	233
+173	37	-81	1	TT_Daemon      	0.0	Right Middle Occipital Gyrus    	 MPM	33 
+174	-44	2	46	TT_Daemon      	0.0	Left  Middle Frontal Gyrus      	 MPM	247
+175	48	25	27	TT_Daemon      	0.0	Right Middle Frontal Gyrus      	 MPM	47 
+176	-47	11	23	TT_Daemon      	0.0	Left  Inferior Frontal Gyrus    	 MPM	239
+177	-53	-49	43	TT_Daemon      	0.0	Left  Inferior Parietal Lobule  	 MPM	244
+178	-23	11	64	TT_Daemon      	0.0	Left  Middle Frontal Gyrus      	 MPM	247
+179	58	-53	-14	TT_Daemon      	0.0	Right Middle Temporal Gyrus     	 MPM	35 
+180	24	45	-15	TT_Daemon      	0.0	Right Superior Frontal Gyrus    	 MPM	51 
+181	34	54	-13	TT_Daemon      	0.0	Right Middle Frontal Gyrus      	 MPM	47 
+182	-21	41	-20	TT_Daemon      	0.0	Left  Superior Frontal Gyrus    	 MPM	251
+183	-18	-76	-24	TT_Daemon      	0.0	Left  Declive                   	 MPM	265
+184	17	-80	-34	TT_Daemon      	0.0	Right Uvula                     	 MPM	62 
+185	35	-67	-34	TT_Daemon      	0.0	Right Uvula                     	 MPM	62 
+186	47	10	33	TT_Daemon      	0.0	Right Middle Frontal Gyrus      	 MPM	47 
+187	-41	6	33	TT_Daemon      	0.0	Left  Inferior Frontal Gyrus    	 MPM	239
+188	-42	38	21	TT_Daemon      	0.0	Left  Middle Frontal Gyrus      	 MPM	247
+189	38	43	15	TT_Daemon      	0.0	Right Middle Frontal Gyrus      	 MPM	47 
+190	49	-42	45	TT_Daemon      	0.0	Right Inferior Parietal Lobule  	 MPM	44 
+191	-28	-58	48	TT_Daemon      	0.0	Left  Superior Parietal Lobule  	 MPM	246
+192	44	-53	47	TT_Daemon      	0.0	Right Inferior Parietal Lobule  	 MPM	44 
+193	32	14	56	TT_Daemon      	0.0	Right Superior Frontal Gyrus    	 MPM	51 
+194	37	-65	40	TT_Daemon      	0.0	Right Inferior Parietal Lobule  	 MPM	44 
+195	-42	-55	45	TT_Daemon      	0.0	Left  Inferior Parietal Lobule  	 MPM	244
+196	40	18	40	TT_Daemon      	0.0	Right Precentral Gyrus          	 MPM	50 
+197	-34	55	4	TT_Daemon      	0.0	Left  Middle Frontal Gyrus      	 MPM	247
+198	-42	45	-2	TT_Daemon      	0.0	Left  Middle Frontal Gyrus      	 MPM	247
+199	33	-53	44	TT_Daemon      	0.0	Right Inferior Parietal Lobule  	 MPM	44 
+200	43	49	-2	TT_Daemon      	0.0	Right Middle Frontal Gyrus      	 MPM	47 
+201	-42	25	30	TT_Daemon      	0.0	Left  Middle Frontal Gyrus      	 MPM	247
+202	-3	26	44	TT_Daemon      	0.0	Left  Medial Frontal Gyrus      	 MPM	252
+203	11	-39	50	TT_Daemon      	0.0	Right Paracentral Lobule        	 MPM	48 
+204	55	-45	37	TT_Daemon      	0.0	Right Supramarginal Gyrus       	 MPM	42 
+205	42	0	47	TT_Daemon      	0.0	Right Middle Frontal Gyrus      	 MPM	47 
+206	31	33	26	TT_Daemon	-1	unknown31_33_26	0	0
+207	48	22	10	TT_Daemon      	0.0	Right Inferior Frontal Gyrus    	 MPM	39 
+208	-35	20	0	TT_Daemon      	0.0	Left  Insula                    	 MPM	230
+209	36	22	3	TT_Daemon      	0.0	Right Insula                    	 MPM	30 
+210	37	32	-2	TT_Daemon      	0.0	Right Inferior Frontal Gyrus    	 MPM	39 
+211	34	16	-8	TT_Daemon      	0.0	Right Inferior Frontal Gyrus    	 MPM	39 
+212	-11	26	25	TT_Daemon      	0.0	Left  Anterior Cingulate        	 MPM	221
+213	-1	15	44	TT_Daemon      	0.0	Left  Cingulate Gyrus           	 MPM	243
+214	-28	52	21	TT_Daemon      	0.0	Left  Superior Frontal Gyrus    	 MPM	251
+215	0	30	27	TT_Daemon      	0.0	Left  Anterior Cingulate        	 MPM	221
+216	5	23	37	TT_Daemon      	0.0	Right Cingulate Gyrus           	 MPM	43 
+217	10	22	27	TT_Daemon      	0.0	Right Anterior Cingulate        	 MPM	21 
+218	31	56	14	TT_Daemon      	0.0	Right Middle Frontal Gyrus      	 MPM	47 
+219	26	50	27	TT_Daemon      	0.0	Right Superior Frontal Gyrus    	 MPM	51 
+220	-39	51	17	TT_Daemon      	0.0	Left  Middle Frontal Gyrus      	 MPM	247
+221	2	-24	30	TT_Daemon      	0.0	Right Cingulate Gyrus           	 MPM	43 
+222	6	-24	0	TT_Daemon      	0.0	Right Thalamus                  	 MPM	76 
+223	-2	-13	12	TT_Daemon      	0.0	Left  Thalamus                  	 MPM	276
+224	-10	-18	7	TT_Daemon      	0.0	Left  Thalamus                  	 MPM	276
+225	12	-17	8	TT_Daemon      	0.0	Right Thalamus                  	 MPM	76 
+226	-5	-28	-4	TT_Daemon	-1	unknown-5_-28_-4	0	0
+227	-22	7	-5	TT_Daemon      	0.0	Left  Lentiform Nucleus         	 MPM	270
+228	-15	4	8	TT_Daemon      	0.0	Left  Lentiform Nucleus         	 MPM	270
+229	31	-14	2	TT_Daemon      	0.0	Right Lentiform Nucleus         	 MPM	70 
+230	23	10	1	TT_Daemon      	0.0	Right Lentiform Nucleus         	 MPM	70 
+231	29	1	4	TT_Daemon      	0.0	Right Lentiform Nucleus         	 MPM	70 
+232	-31	-11	0	TT_Daemon      	0.0	Left  Lentiform Nucleus         	 MPM	270
+233	15	5	7	TT_Daemon      	0.0	Right Lentiform Nucleus         	 MPM	70 
+234	9	-4	6	TT_Daemon      	0.0	Right Thalamus                  	 MPM	76 
+235	54	-43	22	TT_Daemon      	0.0	Right Inferior Parietal Lobule  	 MPM	44 
+236	-56	-50	10	TT_Daemon      	0.0	Left  Superior Temporal Gyrus   	 MPM	236
+237	-55	-40	14	TT_Daemon      	0.0	Left  Superior Temporal Gyrus   	 MPM	236
+238	52	-33	8	TT_Daemon      	0.0	Right Superior Temporal Gyrus   	 MPM	36 
+239	51	-29	-4	TT_Daemon      	0.0	Right Middle Temporal Gyrus     	 MPM	35 
+240	56	-46	11	TT_Daemon      	0.0	Right Superior Temporal Gyrus   	 MPM	36 
+241	53	33	1	TT_Daemon      	0.0	Right Inferior Frontal Gyrus    	 MPM	39 
+242	-49	25	-1	TT_Daemon      	0.0	Left  Inferior Frontal Gyrus    	 MPM	239
+243	-16	-65	-20	TT_Daemon      	0.0	Left  Declive                   	 MPM	265
+244	-32	-55	-25	TT_Daemon      	0.0	Left  Declive                   	 MPM	265
+245	22	-58	-23	TT_Daemon      	0.0	Right Declive                   	 MPM	65 
+246	1	-62	-18	TT_Daemon      	0.0	Right Declive                   	 MPM	65 
+247	33	-12	-34	TT_Daemon      	0.0	Right Uncus                     	 MPM	25 
+248	-31	-10	-36	TT_Daemon      	0.0	Left  Uncus                     	 MPM	225
+249	49	-3	-38	TT_Daemon      	0.0	Right Inferior Temporal Gyrus   	 MPM	29 
+250	-50	-7	-39	TT_Daemon      	0.0	Left  Inferior Temporal Gyrus   	 MPM	229
+251	10	-62	61	TT_Daemon      	0.0	Right Precuneus                 	 MPM	45 
+252	-52	-63	5	TT_Daemon      	0.0	Left  Middle Temporal Gyrus     	 MPM	235
+253	-47	-51	-21	TT_Daemon      	0.0	Left  Fusiform Gyrus            	 MPM	227
+254	46	-47	-17	TT_Daemon      	0.0	Right Fusiform Gyrus            	 MPM	27 
+255	47	-30	49	TT_Daemon      	0.0	Right Postcentral Gyrus         	 MPM	49 
+256	22	-65	48	TT_Daemon      	0.0	Right Precuneus                 	 MPM	45 
+257	46	-59	4	TT_Daemon      	0.0	Right Middle Temporal Gyrus     	 MPM	35 
+258	25	-58	60	TT_Daemon      	0.0	Right Superior Parietal Lobule  	 MPM	46 
+259	-33	-46	47	TT_Daemon      	0.0	Left  Inferior Parietal Lobule  	 MPM	244
+260	-27	-71	37	TT_Daemon      	0.0	Left  Precuneus                 	 MPM	245
+261	-32	-1	54	TT_Daemon      	0.0	Left  Middle Frontal Gyrus      	 MPM	247
+262	-42	-60	-9	TT_Daemon	-1	unknown-42_-60_-9	0	0
+263	-17	-59	64	TT_Daemon      	0.0	Left  Superior Parietal Lobule  	 MPM	246
+264	29	-5	54	TT_Daemon      	0.0	Right Middle Frontal Gyrus      	 MPM	47 
