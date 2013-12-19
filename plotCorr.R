@@ -94,6 +94,8 @@ tp1cor.lmdf <- ddply(tp1cor.lmdf, .(roi1, roi2),.progress = "text", function(x) 
 a<-subset(tp1cor.lmdf,d>40&d<70) 
 i<-head(sort(p.adjust(tp1cor.lmdf$age.p,method="fdr",  n=nrow(tp1cor.lmdf)),decreasing=F, index.return=T)$ix,n=1)
 a<-tp1cor.lm[[i]]
+plot(a$model$agec,a$model$z)
+abline(a)
 
 
 
@@ -165,5 +167,6 @@ ggplot(groupcor,aes(x=roi1,y=roi2,color=mu.z))+geom_tile()+facet <- wrap(~agegro
 ggplot(groupcor,aes(x=roi1,y=mu.age,size=n,color=agegroup))+geom_point()+ theme_bw() # +facet_wrap(~agegroup) 
 
 
+save.image(file="allRvars.Rdata") 
 
 # 
