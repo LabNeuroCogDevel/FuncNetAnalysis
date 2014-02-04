@@ -1,0 +1,7 @@
+ # install.packages(c('ggplot2','R.matlab'))
+ library(R.matlab)
+ library(ggplot2)
+ roiXsubj<-readMat('mat/PCs_per_ind.mat')
+ df <- data.frame(roi=roiXsubj$P[roiidx,], age=1:ncol(roiXsubj$P) )
+ p <- ggplot(df,aes(x=age,y=roi))+geom_smooth()
+ print(p)
