@@ -1,0 +1,15 @@
+NOTES: graphviz doesn't support internal node edging to subgraph
+
+0. 
+  export matlab matrix/tables: mat/PC_tables.mat
+
+1. 
+  R
+  source('graphSigNodeCommChange.R')   #  creates txt/PCs.txt
+
+2. 
+  ./graphSigNodeCommChange.pl > txt/PC_sigGraph.dot
+
+3. 
+   fdp -Tx11 txt/PC_sigGraph.dot
+
