@@ -7,11 +7,11 @@ open my $labelsFH, 'txt/labels_bb264_coords';
 my %roinames;
 while(my @line= split(/\t/, <$labelsFH>)){
  $roinames{$line[0]} = $line[6]; 
- my %abbrvs = (Left=>'L', Right=>'R', Middle=>'Mid.',Superior=>'Sup',
+ my %abbrvs = (Left=>'L', Right=>'R', Middle=>'Mid',Superior=>'Sup',
                Temporal=>'Temp',Frontal=>'Front',Inferior=>'Inf',Medial=>'Med',
                 ) ;
  while( my ($name, $abbrv) = each %abbrvs){
-   $roinames{$line[0]} =~ s/$name/$abbrv./;
+   $roinames{$line[0]} =~ s/$name/${abbrv}_/;
  }
  $roinames{$line[0]} =~ s/\s+//g;
 }
@@ -48,6 +48,7 @@ for my $graphtype (keys %graphs) {
    open my $graphout ,">txt/PC_sigGraph_$graphtype.dot";
    print $graphout "digraph G {\n";
    # TODO: add colored nodes outside subgraph: qw/DM SM V CO FP/
+   #print $graphout "node $_;\n" for (qw/DM SM V CO FP/);
    for my $sgname (qw/DM SM V CO FP/) {
      print  $graphout "\tsubgraph cluster_$sgname {\n";
 
