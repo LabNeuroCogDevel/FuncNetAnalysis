@@ -8,8 +8,8 @@ NOTES: graphviz doesn't support internal node edging to subgraph
   source('graphSigNodeCommChange.R')   #  creates txt/PCs.txt
 
 2. 
-  ./graphSigNodeCommChange.pl > txt/PC_sigGraph.dot
+  ./graphSigNodeCommChange.pl          # creates txt/PC_sigGraph_{AL,EL,EC}.dot
 
 3. 
-   fdp -Tx11 txt/PC_sigGraph.dot
+   for gt in AL EL EC; do fdp -Tpng txt/PC_sigGraph_$gt.dot > img/PC_sigGraph_$gt.png; done
 

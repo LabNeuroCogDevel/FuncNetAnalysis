@@ -26,15 +26,28 @@ while(my @line= split(/\s+/, <$PCfh>)){
 }
 
 # print graph
+for my $graphtype (keys %graphs) {
 
-print "digraph G {\n";
+   open my $graphout ,">txt/PC_sigGraph_$graphtype.dot";
+   print $graphout "digraph G {\n";
 
-for my $sgname (keys %{$graphs{AL}}) {
-  print "	subgraph cluster_CO { }\n" if ! $graphs{AL}->{CO};
-  print "\tsubgraph cluster_$sgname {\n";
-  for my $edges (@{ $graphs{AL}->{$sgname} }) {
-     print "\t\t@$edges[0] -> cluster_@$edges[1] [width=@$edges[2], color=@$edges[3]]\n"
-  }
-  print "\t}\n"
+   for my $sgname (qw/DM SM V CO FP/) {
+     print  $graphout "\tsubgraph cluster_$sgname {\n";
+
+     # if subgraph does not have any nodes end it here
+     if(! $graphs{$graphtype}->{$sgname}){
+      print $graphout "}\n" ;
+      next;
+     }
+     
+     # draw each edge between a node in this subgraph and the subgraph it changes with
+     for my $edges (@{ $graphs{$graphtype}->{$sgname} }) {
+       print  $graphout "\t\t@$edges[0] -> cluster_@$edges[1] [width=@$edges[2], color=@$edges[3]]\n"
+     }
+     # close the subgraph
+     print  $graphout "\t}\n";
+   }
+   # close the graph
+   print  $graphout "}\n";
+   close $graphout;
 }
-print "}\n"
