@@ -20,7 +20,7 @@ close $labelsFH;
 
 my %graphs; # store 3 graphs: EC LE AL
 
-open my $PCfh, 'txt/PCs.txt';
+open my $PCfh, 'txt/sigPC_graph_long.txt';
 my @header = split /\s+/, <$PCfh>;
 
 # read in all the graphs, subgraphs,and nodes
