@@ -31,7 +31,7 @@ while(my @line= split(/\s+/, <$PCfh>)){
  for my $comm (qw/ΔDM ΔSM ΔV ΔCO ΔFP/){
    my $change = sprintf("%.0f",$line{$comm});  # round decimal to a whole number
    next if abs($change) == 0;                # skip anything too small
-   my $posneg = $change>0?"red":"blue";      # is it positive or negative
+   my $posneg = $change>0?"crimson":"darkgreen";      # is it positive or negative
 
    my $com = $comm;
    $com =~ s/Δ//;                           # get rid of the delta
@@ -42,13 +42,19 @@ while(my @line= split(/\s+/, <$PCfh>)){
 }
 close $PCfh;
 
+my %nodecol= (DM=>'red', SM=>'green',V=>'purple', CO=>'black', FP=>'blue');
 # print graph
 for my $graphtype (keys %graphs) {
 
    open my $graphout ,">txt/PC_sigGraph_$graphtype.dot";
    print $graphout "digraph G {\n";
-   # TODO: add colored nodes outside subgraph: qw/DM SM V CO FP/
-   #print $graphout "node $_;\n" for (qw/DM SM V CO FP/);
+   print $graphout "\toverlap = false\n";
+
+   # print the intial nodes
+   print $graphout "\tsubgraph cluster_clusters {\n";
+   print $graphout qq(\t\t$_ [label="$_"  color=$nodecol{$_}  shape=box]\n) for (keys %nodecol);
+   print $graphout "\t}\n";
+
    for my $sgname (qw/DM SM V CO FP/) {
      print  $graphout "\tsubgraph cluster_$sgname {\n";
 
@@ -58,6 +64,9 @@ for my $graphtype (keys %graphs) {
       next;
      }
      
+     # declare nodes so we can color them
+     print $graphout "\t\tnode [color=$nodecol{$sgname}]"; #for (distinct(map {@$_[0]} @{ $graphs{$graphtype}->{$sgname} }))
+
      # draw each edge between a node in this subgraph and the subgraph it changes with
      for my $edges (@{ $graphs{$graphtype}->{$sgname} }) {
        print  $graphout "\t\t$roinames{@$edges[0]} -> @$edges[1] [width=@$edges[2], color=@$edges[3]]\n"

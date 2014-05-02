@@ -11,5 +11,6 @@ NOTES: graphviz doesn't support internal node edging to subgraph
   ./graphSigNodeCommChange.pl          # creates txt/PC_sigGraph_{AL,EL,EC}.dot
 
 3. 
-   for gt in AL EL EC; do fdp -Tpng txt/PC_sigGraph_$gt.dot > img/PC_sigGraph_$gt.png; done
+   #for gt in AL EL EC; do fdp -Tpng txt/PC_sigGraph_$gt.dot > img/PC_sigGraph_$gt.png; done
+   for gt in AL EL EC; do dot -Tpng txt/PC_sigGraph_$gt.dot > img/PC_sigGraph_$gt.png; done
 
