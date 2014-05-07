@@ -17,6 +17,7 @@ while(my @line= split(/\t/, <$labelsFH>)){
    $roinames{$line[0]} =~ s/$name/${abbrv}_/;
  }
  $roinames{$line[0]} =~ s/\s+//g;
+ $roinames{$line[0]} =~ s/-/m/g;
 }
 close $labelsFH;
 
