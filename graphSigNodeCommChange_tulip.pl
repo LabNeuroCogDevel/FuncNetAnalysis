@@ -1,52 +1,22 @@
 #!/usr/bin/env perl
 use strict; use warnings;
 use List::MoreUtils qw/distinct/;
+
+# useful functions in RoiGraphs.pm
+use lib './';
+use RoiGraphs qw/roinames getContrastGraph/;
 # N.B. run R script first to make txt/PCs.txt
 
 ### BUILD DATASTRUCT FROM txt
 
-## read roi names
-open my $labelsFH, 'txt/labels_bb264_coords';
-my %roinames;
-while(my @line= split(/\t/, <$labelsFH>)){
- $roinames{$line[0]} = $line[6]; 
- my %abbrvs = (Left=>'L', Right=>'R', Middle=>'Mid',Superior=>'Sup',
-               Temporal=>'Temp',Frontal=>'Front',Inferior=>'Inf',Medial=>'Med',
-                ) ;
- while( my ($name, $abbrv) = each %abbrvs){
-   $roinames{$line[0]} =~ s/$name/${abbrv}_/;
- }
- $roinames{$line[0]} =~ s/\s+//g;
- $roinames{$line[0]} =~ s/-/m/g;
-}
-close $labelsFH;
-
+## read roi names using model in cwd
+# roinames{1} => L_Gy_...
+my %roinames = roinames('txt/labels_bb264_coords');
 
 ## read in graph file 
-
-my %graphs; # store 3 graphs: EC LE AL
-
-open my $PCfh, 'txt/sigPC_graph_long.txt';
-my @header = split /\s+/, <$PCfh>;
-
-# read in all the graphs, subgraphs,and nodes
-while(my @line= split(/\s+/, <$PCfh>)){
- my %line = map { $header[$_] => $line[$_] } (0..$#line);
-
- # for each communities degree change
- for my $comm (qw/ΔDM ΔSM ΔV ΔCO ΔFP/){
-   my $change = sprintf("%.0f",$line{$comm});  # round decimal to a whole number
-   next if abs($change) == 0;                # skip anything too small
-   my $posneg = $change>0?"crimson":"darkgreen";      # is it positive or negative
-
-   my $com = $comm;
-   $com =~ s/Δ//;                           # get rid of the delta
-
-   # each graph has a subgraph with an array of [ node,subgraph connection, weight,class ]
-   push @{ $graphs{ $line{grpcmp} }->{ $line{OldCommunity} } }, [$line{ROI},$com,abs($change),$posneg]
- }
-}
-close $PCfh;
+# store 3 graphs: EC LE AL
+# contrast -> Network (old community) -> [  [ roi#, community, change, neg||pos], ... ]
+my %graphs =  getContrastGraph('txt/sigPC_graph_long.txt'); 
 
 
 ### PRINT OUT GRAPH
