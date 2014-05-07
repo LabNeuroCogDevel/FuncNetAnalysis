@@ -1,6 +1,10 @@
 #!/usr/bin/env perl
 
 package RoiGraphs;
+# get roinames and contast graph
+#
+# run R script first to make txt/PCs.txt
+#
 
 use strict; use warnings;
 use Exporter qw(import);
