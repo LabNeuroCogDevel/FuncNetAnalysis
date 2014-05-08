@@ -21,18 +21,20 @@ sub roinames {
 
    my %roinames;
    while(my @line= split(/\t/, <$labelsFH>)){
-    $roinames{$line[0]} = $line[6]; 
+    $roinames{$line[0]}->{name} = $line[6]; 
+    $roinames{$line[0]}->{cords} = [ @line[1..3] ]; 
+
     my %abbrvs = (Left=>'L', Right=>'R', Middle=>'Mid',Superior=>'Sup',
                   Temporal=>'Temp',Frontal=>'Front',Inferior=>'Inf',Medial=>'Med',
                   Nucleus=>'Nuc',Anterior=>'Ant',Cingulate=>'Cing',
                   Occipital=>'Occ',Gyrus=>'Gy'
                    ) ;
     while( my ($name, $abbrv) = each %abbrvs){
-      $roinames{$line[0]} =~ s/$name/${abbrv}_/;
+      $roinames{$line[0]}->{name} =~ s/$name/${abbrv}_/;
     }
-    $roinames{$line[0]} =~ s/\s+//g;
-    $roinames{$line[0]} =~ s/-/m/g;
-    $roinames{$line[0]} =~ s/_$//g;
+    $roinames{$line[0]}->{name} =~ s/\s+//g;
+    $roinames{$line[0]}->{name} =~ s/-/m/g;
+    $roinames{$line[0]}->{name} =~ s/_$//g;
    }
    close $labelsFH;
    return %roinames;
@@ -56,7 +58,7 @@ sub getContrastGraph{
    for my $comm (qw/ΔDM ΔSM ΔV ΔCO ΔFP/){
      my $change = sprintf("%.0f",$line{$comm});  # round decimal to a whole number
      next if abs($change) == 0;                # skip anything too small
-     my $posneg = $change>0?"crimson":"darkgreen";      # is it positive or negative
+     my $posneg = $change>0?"pos":"neg";       # is it positive or negative
   
      my $com = $comm;
      $com =~ s/Δ//;                           # get rid of the delta

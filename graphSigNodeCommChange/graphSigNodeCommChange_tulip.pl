@@ -49,7 +49,7 @@ my %nodecol=( DM=>'255,0,0',
     my @ROIS = distinct( map {$_->[0] }  @{ $contrastHR->{$oldCommunity}  } );
     
     # print a node color line for each ROI
-    print "\t(node $roinames{$_} ($nodecol{$oldCommunity}) )\n" for @ROIS;
+    print "\t(node $roinames{$_}->{name} ($nodecol{$oldCommunity}) )\n" for @ROIS;
   }
 
   # say we are done defining colors

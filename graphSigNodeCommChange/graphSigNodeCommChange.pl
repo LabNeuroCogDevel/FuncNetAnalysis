@@ -44,7 +44,7 @@ for my $graphtype (keys %graphs) {
 
      # draw each edge between a node in this subgraph and the subgraph it changes with
      for my $edges (@{ $graphs{$graphtype}->{$sgname} }) {
-       print  $graphout "\t\t$roinames{@$edges[0]} -> @$edges[1] [width=@$edges[2], color=@$edges[3]]\n"
+       print  $graphout "\t\t$roinames{@$edges[0]}->{name} -> @$edges[1] [width=@$edges[2], color=@$edges[3]]\n"
      }
      # close the subgraph
      print  $graphout "\t}\n";
